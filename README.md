@@ -13,7 +13,7 @@ Create a new Cordova Project
 Install the plugin
 
     $ cd /to/project/folder/
-    $ cordova plugin add https://github.com/nithinth7/plugin-opensmile.git
+    $ cordova plugin add https://github.com/RADAR-CNS/RADAR-Cordova-OpenSmile-Plugin.git
     
 
 Edit `index.js` and add the following code inside `onDeviceReady`
