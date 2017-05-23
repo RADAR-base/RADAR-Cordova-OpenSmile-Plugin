@@ -1,4 +1,4 @@
-# Cordova OpenSmile Plugin
+# Cordova opensmile Plugin
 
 Plugin that create a csv file and store the output of opensmile tool for audio recordings.
 
@@ -12,11 +12,11 @@ Create a new Cordova Project
     
 Install the plugin
 
-    $ cd /to/project/folder/
+    $ cd hello
     $ cordova plugin add https://github.com/nithinth7/plugin-opensmile.git
     
 
-Edit `index.js` and add the following code inside `onDeviceReady`
+Edit `www/js/index.js` and add the following code inside `onDeviceReady`
 
 ```js
     var success = function(message) {

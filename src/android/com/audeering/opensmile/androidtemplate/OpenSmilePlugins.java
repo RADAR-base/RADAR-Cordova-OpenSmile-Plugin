@@ -22,14 +22,19 @@ public class OpenSmilePlugins implements SmileJNI.Listener {
     public static String fileName;
     public static OutputStreamWriter outputStreamWriter;
     public File file;
-    public String path;
+    public String path, fpath, fpath1, fpath2, pname;
     File dir;
     private static Activity act;
 
-    public OpenSmilePlugins(Activity act, String name, String filePath) throws IOException {
+    public OpenSmilePlugins(Activity act, String name) throws IOException {
         this.act = act;
         SmileJNI.registerListener(this);
-        dir = new File (Environment.getExternalStorageDirectory().getAbsolutePath() + filePath);
+		pname = act.getPackageName();
+		fpath = "/Android/data/" + pname + "/files";
+		//fpath1 =  filePath;
+		fpath2 = Environment.getExternalStorageDirectory().getAbsolutePath() + fpath;
+		fpath1 = fpath2;
+		dir = new File (fpath2);//Environment.getExternalStorageDirectory().getAbsolutePath() + fpath);
         fileName = name;
         dir.mkdirs();
         file = new File(dir, fileName);
@@ -50,7 +55,7 @@ public class OpenSmilePlugins implements SmileJNI.Listener {
                     double mid = jo.getJSONObject("floatData").getDouble("1");
                     double bas = jo.getJSONObject("floatData").getDouble("2");
                     features = treb + "," + mid + "," + bas + "\n";
-                    writeToFile(features);
+                    //writeToFile(features);
                     Log.d("SmileLog:",features);
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -72,4 +77,7 @@ public class OpenSmilePlugins implements SmileJNI.Listener {
     public void closeFile() throws IOException {
         outputStreamWriter.close();
     }
+	public String getFilePath() throws IOException {
+        return fpath1;
+	}
 }

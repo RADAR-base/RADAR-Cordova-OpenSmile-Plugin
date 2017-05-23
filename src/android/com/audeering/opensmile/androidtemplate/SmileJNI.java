@@ -16,7 +16,7 @@ public class SmileJNI {
      * @param updateProfile
      * @return
      */
-    public static native String SMILExtractJNI(String configfile, int updateProfile);
+    public static native String SMILExtractJNI(String configfile, int updateProfile, String outputfile);
     public static native String SMILEndJNI();
 
     /**

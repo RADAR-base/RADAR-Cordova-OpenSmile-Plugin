@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-opensmile",
+  "version": "2.0.3",
+  "description": "cordova plugin for android devices to use feature extraction tool openSMILE",
+  "cordova": {
+    "id": "cordova-plugin-opensmile",
+    "platforms": [
+      "android",
+      "ios",
+      "wp7"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nithinth7/plugin-opensmile.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp7"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "author": "Nithin Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nithinth7/plugin-opensmile/issues"
+  },
+  "homepage": "https://github.com/nithinth7/plugin-opensmile#readme"
+}
