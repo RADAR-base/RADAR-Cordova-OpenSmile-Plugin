@@ -12,8 +12,9 @@ Create a new Cordova Project
     
 Install the plugin
 
-$ cd /to/project/folder/
-$ cordova plugin add https://github.com/RADAR-CNS/RADAR-Cordova-OpenSmile-Plugin.git
+    $ cd /to/project/folder/
+
+    $ cordova plugin add https://github.com/RADAR-CNS/RADAR-Cordova-OpenSmile-Plugin.git
 
     
 
