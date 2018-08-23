@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         id="cordova-plugin-opensmile"
-        version="2.0.1">
+        version="2.0.1"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
   <name>OpenSmile</name>
 
@@ -22,10 +23,10 @@
         <param name="android-package" value="myjni.OpenSmile"/>
       </feature>
     </config-file>
-	<config-file target="AndroidManifest.xml" parent="/manifest">
+    <config-file target="AndroidManifest.xml" parent="/manifest">
         <uses-permission android:name="android.permission.INTERNET"/>
-		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-		<uses-permission android:name="android.permission.RECORD_AUDIO" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.RECORD_AUDIO" />
     </config-file>
 
     <source-file src="src/android/myjni" target-dir="src/"/>
