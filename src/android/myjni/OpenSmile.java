@@ -26,25 +26,25 @@ public class OpenSmile extends CordovaPlugin {
     OpenSmilePlugins m;
     Config conf;
 	String fpath = "", fpath1 = "", pname = "";
-
+    
     @Override
-    public boolean execute(String action, JSONArray data, CallbackContext callbackContext)
+    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) 
         throws JSONException {
         if (action.equals("start")) {
             String name = data.getString(0);
             String config = data.getString(1);
-
+            
             setupAssets();
             try {
 				pname = cordova.getActivity().getPackageName();
 				fpath1 = "/Android/data/" + pname + "/files";
 				fpath = Environment.getExternalStorageDirectory().getAbsolutePath() + fpath1 + '/' + name;
                 callSmileExtract(config, fpath);
-
+				
             } catch (Exception e) {
                 System.out.println("Exception" + e);
             }
-
+			
 			String message = "Filepath:" + fpath + "/" + name;
             callbackContext.success(message);
             return true;
@@ -85,7 +85,7 @@ public class OpenSmile extends CordovaPlugin {
     }
 
     void setupAssets() {
-        ArrayList ans = new ArrayList<OpenSmilePlugins>();
+        ArrayList<OpenSmilePlugins> ans = new ArrayList<>();
         ans.add(m);
         conf = new Config(ans);
         String[] assets = conf.assets;
