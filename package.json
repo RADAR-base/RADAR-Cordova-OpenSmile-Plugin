@@ -1,7 +1,57 @@
 {
-  "name": "cordova-plugin-opensmile",
-  "version": "2.0.3",
-  "description": "cordova plugin for android devices to use feature extraction tool openSMILE",
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-opensmile",
+        "scope": null,
+        "escapedName": "cordova-plugin-opensmile",
+        "name": "cordova-plugin-opensmile",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\CordovaProjects\\opensmile1\\node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-opensmile@latest",
+  "_id": "cordova-plugin-opensmile@2.0.1",
+  "_inCache": true,
+  "_location": "/cordova-plugin-opensmile",
+  "_nodeVersion": "6.7.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-opensmile-2.0.1.tgz_1493385828771_0.21820117067545652"
+  },
+  "_npmUser": {
+    "name": "nithinth7",
+    "email": "nithinthomas.mec@gmail.com"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-opensmile",
+    "scope": null,
+    "escapedName": "cordova-plugin-opensmile",
+    "name": "cordova-plugin-opensmile",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-opensmile/-/cordova-plugin-opensmile-2.0.1.tgz",
+  "_shasum": "84b35e722096feda30e03c27e2f96a9b0b6ad436",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-opensmile",
+  "_where": "E:\\CordovaProjects\\opensmile1\\node_modules",
+  "author": {
+    "name": "Nithin Thomas"
+  },
+  "bugs": {
+    "url": "https://github.com/nithinth7/plugin-opensmile/issues"
+  },
   "cordova": {
     "id": "cordova-plugin-opensmile",
     "platforms": [
@@ -10,26 +60,43 @@
       "wp7"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nithinth7/plugin-opensmile.git"
+  "dependencies": {},
+  "description": "cordova plugin for android devices to use feature extraction tool openSMILE",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "84b35e722096feda30e03c27e2f96a9b0b6ad436",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-opensmile/-/cordova-plugin-opensmile-2.0.1.tgz"
   },
-  "keywords": [
-    "ecosystem:cordova",
-    "cordova-android",
-    "cordova-ios",
-    "cordova-wp7"
-  ],
   "engines": [
     {
       "name": "cordova",
       "version": ">=3.4.0"
     }
   ],
-  "author": "Nithin Thomas",
+  "gitHead": "738c09634698b7a1ae1f2a5ef06aa56129fcaf13",
+  "homepage": "https://github.com/nithinth7/plugin-opensmile#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp7"
+  ],
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nithinth7/plugin-opensmile/issues"
+  "maintainers": [
+    {
+      "name": "nithinth7",
+      "email": "nithinthomas.mec@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-opensmile",
+  "optionalDependencies": {},
+  "readme": "# Cordova opensmile Plugin\r\n\r\nPlugin that create a csv file and store the output of opensmile tool for audio recordings.\r\n\r\nThis plugin can be used to get live output from oopensmile tool. It will create a csv file and store it in the specified location in the device.\r\n\r\n## Using\r\n\r\nCreate a new Cordova Project\r\n\r\n    $ cordova create opensmile com.example.opensmileapp OpenSmile\r\n    \r\nInstall the plugin\r\n\r\n    $ cd hello\r\n    $ cordova plugin add https://github.com/nithinth7/plugin-opensmile.git\r\n    \r\n\r\nEdit `www/js/index.js` and add the following code inside `onDeviceReady`\r\n\r\n```js\r\n    var success = function(message) {\r\n        alert(message);\r\n    }\r\n\r\n    var failure = function() {\r\n        alert(\"Error calling OpenSmile Plugin\");\r\n    }\r\n```\r\n\r\n### To start opensmile\r\n```js\r\n    opensmile.start(fname, fpath, success, failure);\r\n```\t\r\n\tParams:\r\n\t\tfname: name of the csv file to store opensmile output.\r\n\t\tfpath: path of the csv file to store in the device.\r\n\t\tsuccess: success callback.\r\n\t\tfailure: failure callback.\r\n\r\n### To stop opensmile\r\n```js\t\r\n\topensmile.stop(\"Stop\", success, failure);\r\n```\t\r\n\tParams:\r\n\t\tsuccess: success callback.\r\n\t\tfailure: failure callback.\r\n\t\t\r\nInstall Android platform\r\n\r\n    cordova platform add android\r\n    \r\nRun the code\r\n\r\n    cordova run \r\n\r\n## More Info\r\n\r\nFor more information on setting up Cordova see [the documentation](http://cordova.apache.org/docs/en/latest/guide/cli/index.html)\r\n\r\nFor more info on plugins see the [Plugin Development Guide](http://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/index.html)\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nithinth7/plugin-opensmile.git"
   },
-  "homepage": "https://github.com/nithinth7/plugin-opensmile#readme"
+  "scripts": {},
+  "version": "2.0.1"
 }
